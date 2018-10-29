@@ -1,0 +1,13 @@
+
+<ol>
+  <% @cookbook.all.each_with_index do |recipe, index| %>
+    <li>
+      <h3><%= recipe.name %></h3>
+      <em><%=recipe.time %></em>
+      <p><%= recipe.description %></p>
+      <a href= <%= "/destroy/#{index}" %>>delete this recipe</a>
+      </li>
+  <% end %>
+</ol>
+<a href="/new">Create new recipe</a>
+<!-- <a href="/import">Import new recipes</a> -->

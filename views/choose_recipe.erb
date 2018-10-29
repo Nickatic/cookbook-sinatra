@@ -1,0 +1,10 @@
+<ol>
+  <% @list_of_recipes.each_with_index do |recipe, index| %>
+    <li>
+      <h3><%= recipe.name %></h3>
+      <em><%=recipe.time %></em>
+      <p><%= recipe.description %></p>
+      <a href= <%= "/import/#{index}" %>>Import this one</a>
+      </li>
+  <% end %>
+</ol>
